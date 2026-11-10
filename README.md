@@ -1,25 +1,26 @@
 
-# Syntecxhub TCP Port Scanner
+# TCP Port Scanner
 
-## Project Overview
+**A multithreaded TCP port scanning tool developed using Python as part of the Syntecxhub Cybersecurity Internship.**
 
-A Python-based TCP Port Scanner developed as part
-of the Syntecxhub Cybersecurity Internship.
+---
 
-The project checks TCP ports on a target host to
-identify open, closed, and unresponsive ports.
+## Overview
 
-## Features
+This project is a Python-based TCP Port Scanner designed to identify open, closed, and unresponsive TCP ports on a target host.
+
+It uses socket programming and multithreading to perform efficient port scanning.
+
+## Key Features
 
 - TCP port scanning
-- Single port scanning
-- Port range scanning
-- Multithreading
+- Single port and port range scanning
+- Multithreading using ThreadPoolExecutor
 - Common service identification
-- Timeout handling
+- Configurable connection timeout
 - Exception handling
 - CSV report generation
-- Logging scan results
+- Logging
 
 ## Technologies Used
 
@@ -28,16 +29,35 @@ identify open, closed, and unresponsive ports.
 - ThreadPoolExecutor
 - CSV
 - Logging
+- Argparse
 
-## Requirements
+## Project Structure
 
-Python 3.9 or newer.
+```text
+Syntecxhub_TCP_Port_Scanner/
+│
+├── main.py
+├── README.md
+└── .gitignore
+```
 
-No additional packages are required.
+## Installation
 
-## How to Run
+Clone the repository:
 
-Scan your own computer:
+```bash
+git clone https://github.com/judyomran1234-crypto/Syntecxhub_TCP_Port_Scanner.git
+```
+
+Navigate to the project folder:
+
+```bash
+cd Syntecxhub_TCP_Port_Scanner
+```
+
+## Usage
+
+Scan your local machine:
 
 ```bash
 python main.py 127.0.0.1 -p 1-1024
@@ -49,7 +69,7 @@ Scan selected ports:
 python main.py 127.0.0.1 -p 22,80,443
 ```
 
-Scan one port:
+Scan a single port:
 
 ```bash
 python main.py 127.0.0.1 -p 80
@@ -59,14 +79,16 @@ python main.py 127.0.0.1 -p 80
 
 The scanner generates:
 
-- scan_results.csv
-- scanner.log
+- `scan_results.csv` – Stores scan results.
+- `scanner.log` – Records scanning activity.
 
 ## Responsible Use
 
-This tool is intended for educational purposes.
+This project is intended for educational purposes and authorized security testing.
 
-Only scan systems that you own or have explicit
-permission to test.
+Only scan systems you own or have explicit permission to test.
 
-Do not scan unauthorized networks or devices.
+---
+
+**Developed as part of the Syntecxhub Cybersecurity Internship.**
+
